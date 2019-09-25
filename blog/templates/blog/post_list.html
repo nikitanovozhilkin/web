@@ -1,0 +1,21 @@
+<html>
+<head>
+<title> My super blog </title>
+</head>
+
+<body>
+	<div>
+		<h1> <a href="/"> Main page </a> </h1>
+	</div>
+	{ % for post in posts %}
+	<div>
+		<p>Date published: {{post.published_date }} </p>
+		<h1> <a href = "" > {{ post.title }} </a> </h1>
+		<p> {{ post.text|linebreaksbr }} </p>
+	</div>
+	{ %endfor %}
+
+
+</body>
+
+</html>
