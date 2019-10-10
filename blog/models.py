@@ -14,5 +14,11 @@ class Post(models.Model):
         self.published_date = timezone.now()
         self.save()
 
+    class Meta:
+        vebrose_name='запись в блоге'
+        vebrose_name_plural= 'Записи в блоге'
+
+
+
     def _str_(self):
         return self.title
