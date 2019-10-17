@@ -6,6 +6,10 @@ from django.utils import timezone
 from .forms import PostForm
 from .models import Post
 
+def index(request): 
+if request.user.is_authenticated:
+    return request_user
+
 
 def post_list(request):
     posts = Post.objects.for_user(user=request.user)
